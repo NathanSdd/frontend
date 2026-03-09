@@ -114,6 +114,33 @@
 
 <p id="output"></p>
 
+
+<script>
+    const contactForm = document.getElementById("contactForm");
+const output = document.getElementById("output");
+
+contactForm.addEventListener("submit", e => {
+// prevents the default form submission behaviour (page reload)
+e.preventDefault();
+    // Gets the values from the form 
+    const fullName = document.getElementById("fullName").value.trim();
+    const reason = document.getElementById("reason").value;
+    // Unhides the output element and displays the message
+    output.style.display = "block";
+    output.innerText = `Thanks, ${fullName}. Your reason: ${reason}.`;
+
+    contactForm.style.display = "none";
+});
+
+
+// ✅ Reset the form every time the page loads/reloads
+window.addEventListener("load", () => {
+    contactForm.reset();
+    output.style.display = "none";
+    output.innerText = "";
+});
+
+</script>
     
 </body>
 
