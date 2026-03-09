@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0 auto; }
+        h1 { color: #333; text-align:center }
+        p { margin: 10px 0; font-size: 18px }
+        #remote-data-container { max-width: 80%; margin: 20px auto; padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px }
+        #button-container { text-align: center; margin-bottom: 20px }
+        .btn {
+            display: inline-block; padding: 10px 20px; font-weight: bold;
+            color: #fff; background-color: #007BFF;
+            border: none; border-radius: 5px; cursor: pointer;
+            font-size: 18px; transition: background-color 0.3s ease;
+        }
+        .btn:hover { background-color: #0056b3; }
+        img { display: block; margin: 10px 0; }
+
+        #remote-data-container p {
+    line-height: 1.5;
+}
+section#filter-rm {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 22px 32px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display:none;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-group input[type="text"] {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    max-width: 320px;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #007BFF;
+}
+
+.no-results {
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 12px;
+}
+</style>
+</head>
+<body>
+    <h1>Display remote data</h1>
+    <section id="filter-rm">
+    <h2>Filter Rick & Morty characters</h2>
+    <div class="form-group">
+        <label for="characterSearch">Search characters:</label>
+        <input type="text" id="characterSearch" placeholder="e.g., Rick">
+    </div>
+</section>
+    <div id="button-container">
+        <button class="btn" id="btn-countries">Load Countries</button>
+        <button class="btn" id="btn-users">Load Users</button>
+        <button class="btn" id="btn-rm">Load Rick & Morty</button>
+    </div>
+    
+    
+    <div id="remote-data-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;"></div>
+    <script src="list-remote.js" defer></script>
+</body>
+</html>

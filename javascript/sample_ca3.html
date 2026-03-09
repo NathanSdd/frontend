@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="paraText">
+        
+        This is some sample text.
+
+    </div>
+
+    <button onclick="greenBtn()">Turn Green</button>
+    <button onclick="redBtn()">Turn Red</button>
+
+    <script> 
+
+// Task 1 - Imagine you are building an online store. Create three variables for a product name, its price, and its category (e.g., "Electronics"). Use a template literal to output: "New Arrival: [productName] ([category]) is now on sale for €[price]."
+
+let productName = "iPhone";
+let price1 = 800;
+let category1 = "mobile phones";
+
+console.log(`New arrival: ${productName} (${category1}) is now on sale for $${price1}.`);
+
+
+
+// Task 2 - Create a string variable with the text: "JavaScript is super fun!"
+// •	Output its total length
+// •	Output the first character using [] notation
+// •	Output the last character using [] notation and the .length property
+
+
+let strVar = "JavaScript is super fun!";
+let strLength = strVar.length;
+let firstChar = strVar[0];
+let lastChar = strVar[strVar.length -1];
+
+console.log(`Length: ${strLength} First: ${firstChar} Last: ${lastChar}`);
+
+
+
+
+// Task 3 - Create a variable called userEmail with the value " JoHn.Doe@Gmail.com " (note the spaces and mixed case).
+// •	Chain methods to remove the leading and trailing spaces and convert the email to all lowercase letters (standard email format).
+
+
+let userEmail = " JoHn.Doe@Gmail.com ";
+
+console.log(`${userEmail.trim().toLowerCase()}`);
+
+
+
+
+// Task 4 - Create a function declaration that calculates a product’s final price. It has three parameters: the product’s original price, and a fixed discount amount, and tax added.
+// Call the function with the arguments 100 for original price, 20 for the fixed discount, and 20% for tax added.
+
+
+function calcPrice(basePrice, discount, tax) {
+
+    let finalPrice = (basePrice - discount);
+    finalPrice = finalPrice + (finalPrice * tax);
+    console.log(`The final price is: $${finalPrice}`);
+
+}
+
+calcPrice(100, 20, 0.2);
+
+
+
+// Task 5 - Create a variable called currentSpeed and set it to 0.
+// •	You step on the gas: use a compound assignment operator to increase speed by 30.
+// •	You hit a turbo boost pad: use a compound assignment operator to multiply the speed by 3.
+// •	You hit a small bump: use the decrement operator to reduce speed by 1.
+// •	Output the final speed to the console.
+
+
+let currentSpeed = 0;
+currentSpeed += 30;
+currentSpeed *= 3;
+currentSpeed--;
+console.log(currentSpeed);
+
+
+
+// Task 6 - Write a function declaration that takes two parameters which represent the grade average and the attendance percentage, and checks if the student qualifies (grades 80 or higher AND attendance over 90). 
+// Call the function with argument values of 85 and 95.
+//Output appropriate success and failure messages to the console.
+
+
+function doAward(grade, attendance) {
+    if ((grade >= 80) && (attendance >= 90)) {
+
+        console.log("Congratulations! You qualify for the award.");
+    }
+
+    else {
+
+        console.log("Unfortunately, you do not qualify for the award.");
+    }
+    
+}
+
+doAward(85, 95);
+
+
+
+
+// Task 7 - Create a new <h3> heading with the text "My Favourite Links". Append it to the body of a linked web page.
+
+
+let varMainHeading = document.createElement("h1");
+varMainHeading.innerText = "My Favourite Links";
+document.body.appendChild(varMainHeading);
+
+
+
+// Task 8 - In a linked HTML file, add a new <h2> tag with an ID of "sub-heading".
+// Use JavaScript to change its text to "Updated via JS" and change its colour to blue.
+
+let varSubHeading = document.createElement("h2");
+varSubHeading.id = "sub-heading";
+varSubHeading.innerText = "Updated via JS";
+varSubHeading.style.color = "blue";
+document.body.appendChild(varSubHeading);
+
+
+
+// Task 9 - Assume your JavaScript file is linked to an HTML web page. The web page has a <div> tag with an id of “paraText” and some sample text.
+// The page also has two buttons labelled "Turn Green" and "Turn Red."
+// •	Write an event handler function for the "Turn Green" button so that, when clicked, it will change the background colour of the <div> to green.
+// •	Write an event handler function for the "Turn Red" button so that, when clicked, it will change the background colour of the <div> to red.
+
+
+    function greenBtn() {
+        let paraText = document.getElementById("paraText");
+        paraText.style.color = "green";
+    }
+
+    function redBtn() {
+        let paraText = document.getElementById("paraText");
+        paraText.style.color = "red";
+    }
+
+
+
+    // Task 10 - Create an object called objProduct with sample properties for name, price, and category. Use object destructuring to:
+// - Extract all properties to individual variables
+// - Extract only name and price, with price renamed to productPrice
+// - Output the extracted values to the console.
+
+    const objProduct = {
+        name: "iPhone",
+        price: 800,
+        category: "mobile phones"
+    }
+
+    const {name, price, category} = objProduct;
+    console.log(`Name: ${name} Price: ${price} Category: ${category}`);
+    console.log(`Name: ${name} Product Price: ${price}`);
+
+
+
+    // Task 11 - Create an array called arrWorkWeek containing the strings "Monday", "Tuesday", "Wednesday", "Thursday", and "Friday".
+// •	Log the length of the work week to the console.
+// •	Use destructuring to extract "Monday" and "Wednesday" into variables, while skipping over "Tuesday".
+
+    const arrWorkWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+    console.log(arrWorkWeek.length);
+
+    const [monday, , wednesday] = arrWorkWeek;
+    console.log(`Monday: ${monday} Wednesday: ${wednesday}`);
+
+
+
+    // Task 12 - Your JavaScript code contains the following array of objects:
+// const cart = [
+//    { item: "Laptop", price: 800, quantity: 1 },
+//   { item: "Monitor", price: 150, quantity: 2 },
+//    { item: "Mouse", price: 20, quantity: 5 }
+//];
+// Write a .forEach() loop that calculates the total cost for each line item (price multiplied by quantity). Output a string like: "You bought [quantity] x [item] for a total of $[total]".
+
+
+const arrCart = [
+    { item: "Laptop", price: 800, quantity: 1 },
+    { item: "Monitor", price: 150, quantity: 2 },
+    { item: "Mouse", price: 20, quantity: 5 }
+];
+
+arrCart.forEach(product => {
+console.log(product.item);
+console.log(product.price);
+console.log(product.quantity);
+});
+
+
+
+
+    
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the world's top three soccer players - Messi, Ronaldo, and Neymar">
+    <title>World's Top Soccer Players</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .players-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+        
+        .player-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .player-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .player-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .player-card:hover .player-image img {
+            transform: scale(1.05);
+        }
+        
+        .player-info {
+            padding: 25px;
+        }
+        
+        h2 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #fdbb2d;
+            padding-bottom: 8px;
+        }
+        
+        .player-stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+            color: #b21f1f;
+            font-size: 1.1rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .wikipedia-link {
+            display: inline-block;
+            background: #1a2a6c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .wikipedia-link:hover {
+            background: #253a8d;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .players-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .player-card {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>World's Top Soccer Players</h1>
+        <p class="subtitle">Celebrating the legends of the beautiful game</p>
+    </header>
+
+    <main class="players-container">
+        <article class="player-card">
+            <div class="player-image">
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='220' viewBox='0 0 380 220'%3E%3Crect fill='%231a2a6c' width='380' height='220'/%3E%3Ctext fill='%23ffffff' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle'%3ELionel Messi%3C/text%3E%3C/svg%3E" alt="Lionel Messi">
+            </div>
+            <div class="player-info">
+                <h2>Lionel Messi</h2>
+                <div class="player-stats">
+                    <div class="stat">
+                        <div class="stat-value">8</div>
+                        <div>Ballon d'Or</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">834</div>
+                        <div>Career Goals</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">45</div>
+                        <div>Trophies</div>
+                    </div>
+                </div>
+                <p>Lionel Andrés Messi, often considered the greatest football player of all time, is an Argentine professional footballer who plays as a forward for Inter Miami CF and the Argentina national team. Born in Rosario, Argentina, Messi relocated to Spain at age 13 to join Barcelona, where he spent his entire professional career until 2021.</p>
+                <p>Messi has won a record eight Ballon d'Or awards, a record six European Golden Shoes, and in 2020 was named to the Ballon d'Or Dream Team. He has spent his entire professional career with Barcelona, where he has won a club-record 35 trophies, including ten La Liga titles, four UEFA Champions League titles and seven Copa del Rey titles.</p>
+                <a href="https://en.wikipedia.org/wiki/Lionel_Messi" class="wikipedia-link" target="_blank">Learn more on Wikipedia</a>
+            </div>
+        </article>
+
+        <article class="player-card">
+            <div class="player-image">
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='220' viewBox='0 0 380 220'%3E%3Crect fill='%23b21f1f' width='380' height='220'/%3E%3Ctext fill='%23ffffff' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle'%3ECristiano Ronaldo%3C/text%3E%3C/svg%3E" alt="Cristiano Ronaldo">
+            </div>
+            <div class="player-info">
+                <h2>Cristiano Ronaldo</h2>
+                <div class="player-stats">
+                    <div class="stat">
+                        <div class="stat-value">5</div>
+                        <div>Ballon d'Or</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">867</div>
+                        <div>Career Goals</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">34</div>
+                        <div>Trophies</div>
+                    </div>
+                </div>
+                <p>Cristiano Ronaldo dos Santos Aveiro is a Portuguese professional footballer who plays as a forward for and captains both Saudi Pro League club Al Nassr and the Portugal national team. Often considered the best player in the world and widely regarded as one of the greatest players of all time, Ronaldo has won five Ballon d'Or awards and four European Golden Shoes.</p>
+                <p>Ronaldo began his senior career with Sporting CP, before signing with Manchester United in 2003, winning his first Ballon d'Or in 2008. In 2009, he transferred to Real Madrid for a then world record transfer fee, and won 15 trophies, including two La Liga titles, two Copa del Rey, and four UEFA Champions League titles.</p>
+                <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" class="wikipedia-link" target="_blank">Learn more on Wikipedia</a>
+            </div>
+        </article>
+
+        <article class="player-card">
+            <div class="player-image">
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='220' viewBox='0 0 380 220'%3E%3Crect fill='%23fdbb2d' width='380' height='220'/%3E%3Ctext fill='%23333' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle'%3ENeymar Jr.%3C/text%3E%3C/svg%3E" alt="Neymar Jr.">
+            </div>
+            <div class="player-info">
+                <h2>Neymar Jr.</h2>
+                <div class="player-stats">
+                    <div class="stat">
+                        <div class="stat-value">0</div>
+                        <div>Ballon d'Or</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">437</div>
+                        <div>Career Goals</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">28</div>
+                        <div>Trophies</div>
+                    </div>
+                </div>
+                <p>Neymar da Silva Santos Júnior, known as Neymar Jr., is a Brazilian professional footballer who plays as a forward for Saudi Pro League club Al Hilal and the Brazil national team. A prolific goalscorer and renowned playmaker, he is regarded as one of the best players in the world. Neymar has scored at least 100 goals for three different clubs, making him one of the few players to achieve this.</p>
+                <p>Neymar came into prominence at Santos, where he won several awards, including two Campeonato Paulista championships, a Copa do Brasil, and the 2011 Copa Libertadores. He then transferred to Barcelona, forming a formidable attacking trio with Lionel Messi and Luis Suárez, winning the continental treble of La Liga, Copa del Rey, and the UEFA Champions League.</p>
+                <a href="https://en.wikipedia.org/wiki/Neymar" class="wikipedia-link" target="_blank">Learn more on Wikipedia</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2023 World's Top Soccer Players. This page is for educational purposes only.</p>
+    </footer>
+</body>
+</html> 

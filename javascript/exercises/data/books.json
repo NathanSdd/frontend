@@ -1,0 +1,12 @@
+[
+  { "title": "The Hobbit", "author": "J.R.R. Tolkien", "year": 1937, "isRead": true },
+  { "title": "1984", "author": "George Orwell", "year": 1949, "isRead": true },
+  { "title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960, "isRead": false },
+  { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925, "isRead": true },
+  { "title": "Moby Dick", "author": "Herman Melville", "year": 1851, "isRead": false },
+  { "title": "Pride and Prejudice", "author": "Jane Austen", "year": 1813, "isRead": true },
+  { "title": "The Catcher in the Rye", "author": "J.D. Salinger", "year": 1951, "isRead": false },
+  { "title": "Brave New World", "author": "Aldous Huxley", "year": 1932, "isRead": true },
+  { "title": "The Alchemist", "author": "Paulo Coelho", "year": 1988, "isRead": true },
+  { "title": "Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling", "year": 1997, "isRead": false }
+]

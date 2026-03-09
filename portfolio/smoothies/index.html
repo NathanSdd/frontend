@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A responsive web page with a full-width header background image and centered text using TailwindCSS."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smoothies | Nathan Santos de Deus - Student Number 77304</title>
+
+    <!-- ✅ Google Font: Neucha -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+
+    <!-- ✅ TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ Extend Tailwind config for Neucha font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              neucha: ['Neucha', 'cursive'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- 🌄 Full-Width Header with Background Image -->
+    <header
+      class="relative w-full h-screen lg:h-[85vh] bg-cover bg-center flex items-center justify-center text-center text-white"
+      style="background-image: url('assets/img/smoothies-hero-image.jpg');"
+    >
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="relative z-10 px-4">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-neucha mb-4">
+  Smooth Smoothies
+</h1>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-neucha font-light">
+  Where flavour meets goodness
+</h2>
+      </div>
+    </header>
+
+
+    <section class="bg-white">
+      <div class="container px-6 py-10 mx-auto">
+        <h2 class="text-2xl font-neucha text-center text-purple-800 capitalize lg:text-3xl">
+          Our world-class smoothies are great at any time of the day and offer a tasty alternative to sugary and unhealthy snacks!
+        </h2>
+      </div>
+    </section>
+
+
+<section class="bg-pink-300">
+      <div class="container px-6 py-16 mx-auto">
+        <div class="items-center lg:flex">
+          <div class="w-full lg:w-1/2">
+            <div class="lg:max-w-lg">
+              <h2 class="text-3xl font-neucha text-black lg:text-4xl">Watermelon Wonder</h2>
+              <p class="mt-3 text-gray-800">
+                Watermelon is a delicious and refreshing fruit that's also good for you. It is high in vitamin C, vitamin A and many healthy plant compounds, but contains only 60 calories per smoothie. And because watermelon has a high water content, this smoothie is hydrating and helps you feel full.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
+            <img class="w-full h-full lg:max-w-3xl" src="assets/img/watermelon.png" alt="Watermelon Wonder" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-green-300">
+  <div class="container px-6 py-16 mx-auto">
+    <div class="items-center lg:flex lg:flex-row-reverse">
+      <div class="w-full lg:w-1/2">
+        <div class="lg:max-w-lg">
+          <h2 class="text-3xl font-neucha text-black lg:text-4xl">Apple Delight</h2>
+          <p class="mt-3 text-gray-800">
+            Apples are an awesome source of fibre and vitamin C. They also contain polyphenols, which can have numerous health benefits. Apples have been linked to a lower risk of heart disease because they contain soluble fibre that can help lower blood cholesterol. Studies have also shown that eating apples reduces the risk of type 2 diabetes.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
+        <img class="w-full h-full lg:max-w-3xl" src="assets/img/apple.png" alt="Apple Delight" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <section class="bg-purple-300">
+      <div class="container px-6 py-16 mx-auto">
+        <div class="items-center lg:flex">
+          <div class="w-full lg:w-1/2">
+            <div class="lg:max-w-lg">
+              <h2 class="text-3xl font-neucha text-black lg:text-4xl">Blueberry Surprise</h2>
+              <p class="mt-3 text-gray-800">
+                One of our top sellers. Blueberries are so tasty that many people consider them their favourite fruit. In fact, because they are low in calories and incredibly good for you. Blueberries are often labeled a superfood. Blueberries have the highest antioxidant capacity of all the popular fruits and vegetables.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
+            <img class="w-full h-full lg:max-w-3xl" src="assets/img/blueberry.png" alt="Blueberry smoothie" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-yellow-200">
+  <div class="container px-6 py-16 mx-auto">
+    <div class="items-center lg:flex lg:flex-row-reverse">
+      <div class="w-full lg:w-1/2">
+        <div class="lg:max-w-lg">
+          <h2 class="text-3xl font-neucha text-black lg:text-4xl">Lemon Luxury</h2>
+          <p class="mt-3 text-gray-800">
+            Add zest to your day with our delicious Lemon Luxury smoothie. As a citrus fruit, lemons are high in vitamin C, which is a primary antioxidant that helps reduce your risk of cardiovascular disease and lowers blood pressure. Refreshing and energising - that's our Lemony Luxury smoothie!
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
+        <img class="w-full h-full lg:max-w-3xl" src="assets/img/lemon.png" alt="Lemon Luxury" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+        

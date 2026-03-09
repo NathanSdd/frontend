@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            background-color: green;
+            color: white;
+            border: solid 1px green;
+            padding: 8px 12px;
+        }
+
+        .color-red {
+            color: red;
+            background: pink;
+        }
+
+        #input {
+            padding: 6px 12px;
+            background-color: lightblue;
+            border: solid 1px black
+        }
+
+        .input-error {
+            background-color: pink;
+            border: solid 1px red;
+        }
+
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1 id="myHeading"> My Heading</h1>
+
+    
+<p id="myPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium error hic obcaecati odit eaque eius animi voluptas nam voluptates ullam. Vitae veniam minima dignissimos facere mollitia asperiores, possimus beatae tempore.</P>
+
+
+    <button onclick="changeHeading()">Update Heading</button>
+
+    <button onclick="changePara()">Update Para</button>
+
+
+
+    <p><input type="text" id="userName" placeholder="Enter your first name"></P>
+
+    <button onclick="showName()">Submit Name</button>
+
+
+    <p><input type="text" id="itemQty" placeholder="Enter your quantity"></P>
+
+    <button onclick="showNumber()">Submit Qty</button>
+
+
+    <h1> Array of Objects</h1>
+    <div id="output-products"></div>
+
+
+    <script>
+
+        function changeHeading() {
+
+            //JavaScript             HTML
+            let varHeading =document.getElementById("myHeading");
+            console.log(`Text in Heading: ${varHeading.innerText}`);
+            varHeading.innerText = "Heading text updated";
+
+        }
+
+
+        function changePara(){
+
+            let varPara = document.getElementById("myPara");
+            varPara.classList.add("color-red")
+
+        }
+
+        
+        function showName() {
+            let userName = document.getElementById("userName").value.trim();
+            let name = document.getElementById("userName")
+            // Check that the trimmed value is not empty
+            if (userName.length > 0) {
+            console.log(`Hello, ${userName}!`);
+            }
+            else {
+             console.log(`Please enter your name.`);
+             name.classList.add("input-error")
+            }
+        }
+
+        function showNumber() {
+            const value = document.getElementById('itemQty').value.trim();
+            const userValue = document.getElementById('itemQty');
+            if (value !== '' && !isNaN(value)) {
+            console.log(`You entered the number ${Number(value)}`);
+            userValue.classList.remove("input-error");
+            }
+            else {
+             console.log(`Please enter a number.`);
+             userValue.classList.add("input-error");
+            }
+    }
+
+
+        // Declaring and populating an object
+        const objBook = {
+            title: "Dubliners", // string
+            author: "James Joyce", // string
+            year: 1914, // number
+            isAvailable: true // boolean
+    }
+
+        console.log(objBook);
+
+        const {title, author, year, isAvailable} = objBook;
+
+        console.log(`${title} by ${author}. Published in ${year}. In Stock: ${isAvailable}`);
+
+
+
+        
+        // Declaring an array with items on separate lines and a trailing comma
+        const arrUserFirstNames = [
+        "Camille",
+        "Emma",
+        "Gabriel",
+        "Romy",
+        ];
+
+        
+        const arrUserIDs = [4032, 5229, 1234, 6317];
+        const arrCars = ["Volvo", "Citreon", "BMW", "Opel", "Peugeot", "Ford"];
+        const arrPrices = [11.99, 24.50, 34.25, 49.99];
+
+        // === Outputting array items by index position ===
+
+        console.log(`First item of arrUserFirstNames array: ${arrUserFirstNames[0]}`);
+        console.log(`First item of arrCars array: ${arrCars[2]}`);
+        console.log(`First item of arrUserIDs array: ${arrUserIDs[3]}`);
+
+        // === Array length property ===
+        console.log(`Number of items in arrUserFirstNames: ${arrUserFirstNames.length}`);
+        // 4
+        console.log(`Number of items in arrPrices: ${arrPrices.length}`);
+        // 4
+
+
+        // === Accessing last item in array ===
+        console.log(`Last item of arrCars array: ${arrCars[arrCars.length-1]}`);
+        // Ford
+        console.log(`Last item of arrStudentIDs array: ${arrUserIDs[arrUserIDs.length-1]}`);
+        // 6317
+
+
+        // === Looping through array values ===
+
+        // Looping through the arrUserFirstNames array
+        arrUserFirstNames.forEach(userFirstName => {
+            console.log(userFirstName);
+            
+        });	
+
+        // Looping through the arrPrices array
+        arrPrices.forEach(price => {
+            console.log(price);
+        });
+
+        // looping through the arrCars array
+        arrCars.forEach(car => {
+            console.log(car);
+        });
+
+
+        // Create and populate new array
+        const arrFruits = ["Apple", "Banana", "Orange", "Pear"];
+            
+        // Assign array items to variables without destructuring
+        let fruit1 = arrFruits[0];
+        let fruit2 = arrFruits[1];
+        let fruit3 = arrFruits[2];
+        let fruit4 = arrFruits[3];
+        console.log(`Fruit 1: ${fruit1}`);
+        console.log(`Fruit 2: ${fruit2}`);
+        console.log(`Fruit 3: ${fruit3}`);
+        console.log(`Fruit 4: ${fruit4}`);
+
+
+
+        // Assign array items to variables with destructuring
+        let [fruitOne, fruitTwo, fruitThree, fruitFour] = arrFruits;
+        console.log(`Fruit 1: ${fruitOne}`);
+        console.log(`Fruit 2: ${fruitTwo}`);
+        console.log(`Fruit 3: ${fruitThree}`);
+        console.log(`Fruit 4: ${fruitFour}`);
+
+
+
+        const arrColours = [
+            "Blue",
+            "Red",
+            "Green",
+            "Purple",
+            "Yellow",
+        ];
+
+        console.log(`First colour is: ${arrColours[0]}`);
+        console.log(`Last colour is: ${arrColours[arrColours.length-1]}`);
+        console.log(`Number of colours is: ${arrColours.length}`);
+
+
+
+
+        // Creating an array of objects
+        const arrProducts = [
+            {
+                productID: 1001,
+                name: "Laptop",
+                price: 999.99,
+                inStock: true
+            },
+            {
+                productID: 1002,
+                name: "Mouse",
+                price: 24.99,
+                inStock: true
+            },
+            {
+                productID: 1003,
+                name: "Keyboard",
+                price: 59.99,
+                inStock: false
+            }
+        ];
+        console.log(arrProducts);
+
+
+
+        // Creating an array with objects on a single line
+        const arrUsers = [
+            { firstName: "Alice", age: 25, city: "New York" },
+            { firstName: "Bob", age: 30, city: "Los Angeles" },
+            { firstName: "Charlie", age: 35, city: "Chicago" }
+        ];
+        console.log(arrUsers);
+
+
+
+        
+        // Displaying some data from the arrProducts array of objects
+        console.log(`ID of product 0: ${arrProducts[0].productID}`); // 1001
+        console.log(`Name of product 1: ${arrProducts[1].name}`); // Mouse
+        console.log(`Price of product 2: ${arrProducts[2].price}`); // 59.99
+
+        // Displaying some data from the arrUsers array of objects
+        console.log(`First Name of user 0: ${arrUsers[0].firstName}`); // Alice
+        console.log(`Age of user 1: ${arrUsers[1].age}`); // 30
+        console.log(`City of user 2: ${arrUsers[2].city}`); // Chicago
+
+
+
+        // Reformat output from arrProducts
+        arrProducts.forEach(product => {
+            console.log(`Product: ${product.name.toUpperCase()} (ID: ${product.productID}) €${product.price}`);
+            // Variable to hold stock status
+            let stockStatus;
+            // Determine stock status using if...else
+            if (product.inStock) {
+                stockStatus = '✓ Currently Available';
+            } else {
+                stockStatus = '✗ Out of Stock';
+            }
+            console.log(`In Stock? ${stockStatus}`);
+            console.log("---------------"); // Separator between products
+        });
+
+
+
+        // Loop through arrUsers and output formatted data
+        arrUsers.forEach(user => {
+            console.log("User Details:");
+            console.log(`First Name: ${user.firstName}`);
+            console.log(`Age: ${user.age}`);
+            console.log(`City: ${user.city}`);
+            console.log("---------------"); // Separator between users
+        });
+
+
+
+
+        // Displaying data from arrProducts in HTML
+
+        // Get reference to the div container to hold the products output
+        const containerProducts = document.getElementById('output-products');
+
+        // Loop through each product
+        arrProducts.forEach(product => {
+            // Create a sub-heading tag for each product's name
+            const headingProducts = document.createElement('h3');
+            // Add product name to sub-heading tag
+            headingProducts.innerText = product.name;
+            
+            // Create paragraph for each product's details
+            const detailsProducts = document.createElement('p');
+            
+            // Check stock status
+            let stockStatus;
+            if (product.inStock) {
+                stockStatus = 'In Stock';
+            } else {
+                stockStatus = 'Out of Stock';
+            }
+            
+            // Add product details to paragraph page
+            detailsProducts.innerText = `Product ID: ${product.productID}
+            Price: €${product.price}
+            Stock Status: ${stockStatus}`;
+            
+            // Append heading and paragraph tags to div container
+            containerProducts.appendChild(headingProducts);
+            containerProducts.appendChild(detailsProducts);
+        });
+
+
+
+
+    </script>
+
+</body>
+</html>
