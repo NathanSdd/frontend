@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nathan Santos de Deus - 77304</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+section{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(45deg,#ffb27d,#7dd3fc,#a78bfa);
+}
+
+h1{
+    font-size:40px;
+}
+
+#counter{
+    font-size:80px;
+    margin:20px;
+    color:#222;
+}
+
+#btn-container{
+    display:flex;
+    gap:30px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:8px;
+    border:2px solid #333;
+    background:white;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<section>
+
+<h1>Counter</h1>
+
+<span id="counter">0</span>
+
+<div id="btn-container">
+
+<button class="btn" id="btn-decrease">Decrease</button>
+
+<button class="btn" id="btn-reset">Reset</button>
+
+<button class="btn" id="btn-increase">Increase</button>
+
+</div>
+
+</section>
+
+<script> 
+
+// Counter value
+let count = 0;
+
+// Get elements
+const counter = document.getElementById("counter");
+const buttonContainer = document.getElementById("btn-container");
+
+// Event listener on container (event delegation)
+buttonContainer.addEventListener("click", (e) => {
+
+    // Only react to button clicks
+    if(e.target.classList.contains("btn")){
+
+        // Determine which button was clicked
+        if(e.target.id === "btn-increase"){
+            count++;
+        }
+        else if(e.target.id === "btn-decrease"){
+            count--;
+        }
+        else if(e.target.id === "btn-reset"){
+            count = 0;
+        }
+
+        // Update counter text
+        counter.innerText = count;
+
+        // Change colour based on value
+        if(count > 0){
+            counter.style.color = "green";
+        }
+        else if(count < 0){
+            counter.style.color = "red";
+        }
+        else{
+            counter.style.color = "#222";
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

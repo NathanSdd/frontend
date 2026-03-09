@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Santos de Deus - 77304</title>
+<meta charset="UTF-8">
+<title>Nathan Santos de Deus - 77304</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+section{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#dbf4e4;
+}
+
+.display-box{
+    background:black;
+    color:white;
+    padding:20px 40px;
+    font-size:28px;
+    margin-bottom:40px;
+}
+
+.display-box span{
+    background:green;
+    padding:6px 12px;
+}
+
+button{
+    padding:16px 40px;
+    border:none;
+    border-radius:40px;
+    font-size:20px;
+    color:white;
+    background:linear-gradient(45deg, blue, purple);
+    cursor:pointer;
+}
+</style>
+
 </head>
+
 <body>
-    
+
+<section>
+
+<div class="display-box">
+Background Colour:
+<span id="colourCode">#dbf4e4</span>
+</div>
+
+<button id="btnColour">🎨 Click me</button>
+
+</section>
+
+<script>
+
+// Generate random number helper
+function getRandomNumber(max){
+    return Math.floor(Math.random() * max);
+}
+
+// Valid hex characters
+const hexChars = [
+"0","1","2","3","4","5","6","7","8","9",
+"A","B","C","D","E","F"
+];
+
+// Get elements
+const button = document.getElementById("btnColour");
+const section = document.querySelector("section");
+const colourCode = document.getElementById("colourCode");
+
+// Click event
+button.addEventListener("click", () => {
+
+    let hex = "#";
+
+    // Build 6 character hex code
+    for(let i=0; i<6; i++){
+        hex += hexChars[getRandomNumber(16)];
+    }
+
+    // Apply colour
+    section.style.backgroundColor = hex;
+
+    // Display hex code
+    colourCode.textContent = hex;
+
+});
+
+</script>
+
 </body>
 </html>
